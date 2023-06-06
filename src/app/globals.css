@@ -1,11 +1,32 @@
 :root {
-  --background-color: #4a4646;
+  --background-color: hsl(214, 14%, 10%);
+  --text-color: hsl(0, 0%, 100%);
+  --gray-text-color: hsl(210, 7%, 56%);
+  --border-color: hsl(210, 7%, 18%);
+  --pink-text-color: hsl(330, 100%, 71%);
+  --blue-text-color: hsl(203, 92%, 75%);
+  --text-gradient: linear-gradient(90deg,
+      rgba(252, 201, 20, 1) 0%,
+      rgba(254, 111, 55, 1) 25%,
+      rgba(198, 106, 221, 1) 50%,
+      rgba(255, 105, 167, 1) 75%);
 }
 
 .light {
-  --background-color: #f5f5f5;
+  --background-color: hsl(0, 0%, 91%);
+  --text-color: hsl(214, 14%, 10%);
+  --gray-text-color: hsl(210, 9%, 31%);
+  --border-color: hsl(210, 6%, 46%);
+  --pink-text-color: hsl(334, 97%, 36%);
+  --blue-text-color: hsl(203, 99%, 35%);
+  --text-gradient: linear-gradient(90deg,
+      rgba(252, 201, 20, 1) 0%,
+      rgba(255, 162, 65, 1) 25%,
+      rgba(190, 76, 108, 1) 50%,
+      rgba(182, 151, 252, 1) 75%);
 }
 
 body {
   background-color: var(--background-color);
+  color: var(--text-color);
 }
