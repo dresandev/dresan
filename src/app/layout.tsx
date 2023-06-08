@@ -1,6 +1,8 @@
 import { ThemeProvider } from '@providers/ThemeProvider'
-import { Root } from '@components/Root'
+import { Inter } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Dresan - Frontend Developer 🥸',
@@ -9,10 +11,16 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider>
-      <Root>
-        {children}
-      </Root>
-    </ThemeProvider>
+    <html lang='en' suppressHydrationWarning>
+      <body className={inter.className} >
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

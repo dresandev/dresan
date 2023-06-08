@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  color: var(--blue-text-color);
+  font-weight: bold;
+}
+
+.link:hover {
+  transition: box-shadow 200ms ease 0s;
+  box-shadow: 0px 3px 0px currentColor;
+}

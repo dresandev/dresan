@@ -1,10 +1,12 @@
-:root {
+:root,
+.dark {
   --background-color: hsl(214, 14%, 10%);
   --text-color: hsl(0, 0%, 100%);
   --gray-text-color: hsl(210, 7%, 56%);
   --border-color: hsl(210, 7%, 18%);
   --pink-text-color: hsl(330, 100%, 71%);
   --blue-text-color: hsl(203, 92%, 75%);
+  --hover-color: hsl(210, 9%, 31%);
   --text-gradient: linear-gradient(90deg,
       rgba(252, 201, 20, 1) 0%,
       rgba(254, 111, 55, 1) 25%,
@@ -13,12 +15,13 @@
 }
 
 .light {
-  --background-color: hsl(0, 0%, 91%);
+  --background-color: hsl(0, 0%, 95%);
   --text-color: hsl(214, 14%, 10%);
   --gray-text-color: hsl(210, 9%, 31%);
   --border-color: hsl(210, 6%, 46%);
   --pink-text-color: hsl(334, 97%, 36%);
   --blue-text-color: hsl(203, 99%, 35%);
+  --hover-color: hsl(210, 6%, 82%);
   --text-gradient: linear-gradient(90deg,
       rgba(252, 201, 20, 1) 0%,
       rgba(255, 162, 65, 1) 25%,
@@ -26,7 +29,56 @@
       rgba(182, 151, 252, 1) 75%);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
 body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }

@@ -1,15 +1,8 @@
 'use client'
 
-import { ContextThemeProvider } from '@context/theme'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import { ThemeProviderProps } from 'next-themes/dist/types'
 
-interface ThemeProviderProps {
-  children: React.ReactNode
-}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  return (
-    <ContextThemeProvider>
-      {children}
-    </ContextThemeProvider>
-  )
-}
+export const ThemeProvider = (props: ThemeProviderProps) => (
+  <NextThemesProvider {...props} />
+)
