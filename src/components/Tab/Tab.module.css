@@ -1,0 +1,21 @@
+.tab {
+  flex: 1 0 content;
+  padding-block: 1.5rem;
+  font-weight: bold;
+  color: var(--gray-text-color);
+  background-color: transparent;
+  border: none;
+}
+
+.tab span {
+  padding-block: 1.5rem;
+}
+
+.tab:hover {
+  background-color: var(--secondary-hover-color);
+}
+
+.tab.active span {
+  color: var(--text-color);
+  box-shadow: 0px 3px 0px var(--blue-text-color);
+}

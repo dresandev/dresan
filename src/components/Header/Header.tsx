@@ -17,7 +17,7 @@ export const Header = () => {
           <CakeIcon /> Noviembre 8
         </span>
         <span>
-          <CalendarIcon /> Disponible
+          <CalendarIcon /> Desarrollando desde 2021
         </span>
       </div>
 

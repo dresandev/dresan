@@ -1,0 +1,6 @@
+.tabs {
+  margin-top: 2rem;
+  margin-inline: -1.5rem;
+  display: flex;
+  overflow: auto;
+}
