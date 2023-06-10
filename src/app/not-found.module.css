@@ -1,0 +1,18 @@
+.main {
+  height: calc(100% - 148px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: clamp(5rem, 6vw, 9rem);
+  text-align: center;
+}
+
+.errorCode {
+  display: block;
+  background-image: var(--text-gradient);
+  background-clip: text;
+  color: transparent;
+}

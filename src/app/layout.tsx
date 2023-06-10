@@ -2,6 +2,8 @@ import { ThemeProvider } from '@providers/ThemeProvider'
 import { Inter } from 'next/font/google'
 
 import { UiProvider } from '@providers/UiProvider'
+import { Navbar } from '@components/Navbar'
+import { Footer } from '@components/Footer'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,7 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
         >
           <UiProvider>
+            <Navbar />
             {children}
+            <Footer />
           </UiProvider>
         </ThemeProvider>
       </body>

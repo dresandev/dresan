@@ -1,5 +1,5 @@
+import { Tab } from './Tab'
 import styles from './TabBar.module.css'
-import { Tab } from '@components/Tab'
 
 const tabs = [
   {

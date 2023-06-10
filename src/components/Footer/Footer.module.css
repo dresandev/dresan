@@ -6,3 +6,12 @@
   flex-direction: column;
   gap: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .links {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+}

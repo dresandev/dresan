@@ -3,7 +3,7 @@
 import { useContext } from 'react'
 
 import { UiContext } from '@context/ui'
-import styles from './Tab.module.css'
+import styles from './TabBar.module.css'
 
 interface TabProps {
   index: number

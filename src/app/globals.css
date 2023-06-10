@@ -66,17 +66,11 @@ body {
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: var(--background-color);
   color: var(--text-color);
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 1.6rem;
-  }
 }
 
 img {
@@ -109,4 +103,16 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
