@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-
-import { IconLink } from '@components/IconLink'
+import { IconLink } from '@components/IconButton'
 import { MoonIcon, SunIcon } from '@components/Icons'
 
 export const ThemeBtn = () => {
@@ -18,11 +17,16 @@ export const ThemeBtn = () => {
 
   const isLight = resolvedTheme === 'light'
   const oppositeTheme = isLight ? 'dark' : 'light'
+  const spanishThemeName = isLight ? 'oscuro' : 'claro'
 
   const handleToggleTheme = () => setTheme(oppositeTheme)
 
   return (
-    <IconLink tabIndex={0} onClick={handleToggleTheme}>
+    <IconLink
+      title={`Cambiar a tema ${spanishThemeName}`}
+      tabIndex={0}
+      onClick={handleToggleTheme}
+    >
       {
         isLight ? <SunIcon /> : <MoonIcon />
       }

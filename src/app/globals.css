@@ -1,11 +1,15 @@
 :root,
 .dark {
   --background-color: hsl(214, 14%, 10%);
+  --background-color-alpha: hsla(214, 14%, 10%, 0.6);
   --text-color: hsl(0, 0%, 100%);
+  --text-color-alpha: hsla(0, 0%, 100%, 0.1);
   --gray-text-color: hsl(210, 7%, 56%);
   --border-color: hsl(210, 7%, 18%);
   --pink-text-color: hsl(330, 100%, 71%);
+  --pink-text-color-alpha: hsla(330, 100%, 71%, 0.4);
   --blue-text-color: hsl(203, 92%, 75%);
+  --blue-text-color-alpha: hsla(203, 92%, 75%, 0.6);
   --hover-color: hsl(210, 9%, 31%);
   --secondary-hover-color: hsl(204, 15%, 13%);
   --text-gradient: linear-gradient(90deg,
@@ -13,22 +17,28 @@
       rgba(254, 111, 55, 1) 25%,
       rgba(198, 106, 221, 1) 50%,
       rgba(255, 105, 167, 1) 75%);
+  color-scheme: dark;
 }
 
 .light {
   --background-color: hsl(0, 0%, 95%);
-  --text-color: hsl(214, 14%, 10%);
+  --background-color-alpha: hsla(0, 0%, 95%, 0.6);
+  --text-color: hsl(0, 0%, 0%);
+  --text-color-alpha: hsla(0, 0%, 0%, 0.1);
   --gray-text-color: hsl(210, 9%, 31%);
   --border-color: hsl(210, 6%, 46%);
   --pink-text-color: hsl(334, 97%, 36%);
+  --pink-text-color-alpha: hsla(334, 97%, 36%, 0.4);
   --blue-text-color: hsl(203, 99%, 35%);
+  --blue-text-color-alpha: hsla(203, 99%, 35%, 0.6);
   --hover-color: hsl(210, 6%, 82%);
   --secondary-hover-color: hsl(0, 0%, 91%);
   --text-gradient: linear-gradient(90deg,
       rgba(252, 201, 20, 1) 0%,
       rgba(255, 162, 65, 1) 25%,
       rgba(190, 76, 108, 1) 50%,
-      rgba(182, 151, 252, 1) 75%);
+      rgb(117, 93, 171) 75%);
+  color-scheme: light;
 }
 
 *,
@@ -53,16 +63,11 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #c7c7c799;
+  background-color: hsla(210, 7%, 56%, 0.6);
 }
 
 html {
   font-size: 62.5%;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 body {
@@ -93,6 +98,7 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
 }
 
 p,

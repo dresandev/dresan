@@ -1,0 +1,50 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  height: 43rem;
+  user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill {
+  padding: 2.5rem 2rem;
+  font-weight: 500;
+  color: var(--pink-text-color);
+  background-color: var(--text-color-alpha);
+  border-radius: 1rem;
+  backdrop-filter: blur(.4rem);
+  cursor: grab;
+}
+
+.skill:active {
+  cursor: grabbing;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 4vw, 6rem);
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background-color: var(--pink-text-color-alpha);
+  filter: blur(9rem);
+}

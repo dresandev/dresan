@@ -12,18 +12,18 @@
   max-width: 64rem;
 }
 
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .cardFooter {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
 }
 
 .links {

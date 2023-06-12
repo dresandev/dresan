@@ -12,7 +12,3 @@
 .link:hover {
   background-color: var(--hover-color);
 }
-
-.outlined {
-  border: 1px solid var(--border-color);
-}

@@ -1,0 +1,11 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.tag {
+  padding: 0 .6rem;
+  border-radius: .5rem;
+  background-color: var(--hover-color);
+}

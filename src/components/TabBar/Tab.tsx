@@ -1,7 +1,6 @@
 'use client'
 
 import { useContext } from 'react'
-
 import { UiContext } from '@context/ui'
 import styles from './TabBar.module.css'
 

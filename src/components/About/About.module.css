@@ -1,0 +1,11 @@
+.about p {
+  margin-bottom: 2rem;
+}
+
+.aboutFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}

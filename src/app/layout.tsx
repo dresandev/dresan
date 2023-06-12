@@ -13,7 +13,11 @@ export const metadata = {
   description: 'Mi portafolio como desarrollador Frontend con mis proyectos más recientes. Dale un vistazo a mis trabajos y ponte en contacto conmigo si tienes algún proyecto en mente.',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={inter.className} >

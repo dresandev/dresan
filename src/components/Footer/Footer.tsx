@@ -1,5 +1,5 @@
-import { IconLink } from '@components/IconLink'
-import { GitHubIcon, EmailIcon, LinkedinIcon, } from '@components/Icons'
+import { IconLink } from '@components/IconButton'
+import { GitHubIcon, EmailIcon, LinkedinIcon } from '@components/Icons'
 import styles from './Footer.module.css'
 
 export const Footer = () => {
@@ -8,22 +8,22 @@ export const Footer = () => {
       <div className={styles.links}>
         <IconLink
           href='https://github.com/dresandev'
+          title='GitHub'
           target='_blank'
-          outlined
         >
           <GitHubIcon />
         </IconLink>
         <IconLink
           href='mailto:javiandres.016@gmail.com'
+          title='Correo electrónico'
           target='_blank'
-          outlined
         >
           <EmailIcon />
         </IconLink>
         <IconLink
           href='https://www.linkedin.com/in/dresandev/'
+          title='LinkedIn'
           target='_blank'
-          outlined
         >
           <LinkedinIcon />
         </IconLink>
