@@ -1,45 +1,50 @@
 import Image from 'next/image'
-import { IconLink, Tags } from '@components'
+import { Project } from '@interfaces'
+import { IconButton, Tags } from '@components'
 import { OctocatIcon, LinkIcon } from '@components/Icons'
-import projectImage from '@assets/project.png'
-import styles from './Projects.module.css'
+import styles from './styles.module.css'
 
-// TODO: implement data from props
-const tags = ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
+interface ProjectCardProps extends Project { }
 
-export const ProjectCard = () => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  image,
+  title,
+  description,
+  tags,
+  sourceCode,
+  liveDemo
+}) => {
   return (
     <article className={styles.card}>
       <h2 className='sr-only'>Proyectos</h2>
       <Image
         className={styles.cardImage}
-        src={projectImage}
+        src={image}
         alt='Project image'
+        priority={true}
       />
-      <h3>BurgerShop</h3>
-      <p>
-        Web para mostrar la carta de restaurante, enfocado en UX reflejando la experiencia que los productos y servicios de companyName brindan
-      </p>
+      <h3>{title}</h3>
+      <p>{description}</p>
 
       <footer className={styles.cardFooter}>
         <Tags tags={tags} />
 
         <div className={styles.links}>
-          <IconLink
-            href='#'
+          <IconButton
+            href={sourceCode}
             target='_blank'
             title='Ver Codigo'
           >
             <OctocatIcon />
-          </IconLink>
+          </IconButton>
 
-          <IconLink
-            href='#'
+          <IconButton
+            href={liveDemo}
             target='_blank'
             title='Visitar web'
           >
             <LinkIcon />
-          </IconLink>
+          </IconButton>
         </div>
       </footer>
     </article>

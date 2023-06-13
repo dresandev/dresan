@@ -1,4 +1,4 @@
-import styles from './Tags.module.css'
+import styles from './styles.module.css'
 
 interface TagProps {
   children: React.ReactNode | string

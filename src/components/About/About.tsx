@@ -1,5 +1,5 @@
 import { DresanSignature } from '@components/Icons'
-import styles from './About.module.css'
+import styles from './styles.module.css'
 
 export const About = () => {
   return (

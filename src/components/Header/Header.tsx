@@ -1,6 +1,6 @@
 import { Link } from '@components/Link'
 import { BriefcaseIcon, CakeIcon, CalendarIcon } from '@components/Icons'
-import styles from './Header.module.css'
+import styles from './styles.module.css'
 
 export const Header = () => {
   return (

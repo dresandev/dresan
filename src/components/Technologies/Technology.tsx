@@ -1,14 +1,14 @@
 'use client'
 
 import Draggable, { type ControlPosition } from 'react-draggable'
-import styles from './Skills.module.css'
+import styles from './styles.module.css'
 
-interface SkillProps {
+interface TechnologiesProps {
   name: string;
   defaultPosition?: ControlPosition;
 }
 
-export const Skill: React.FC<SkillProps> = ({ name, defaultPosition }) => {
+export const Technology: React.FC<TechnologiesProps> = ({ name, defaultPosition }) => {
   return (
     <Draggable
       defaultPosition={defaultPosition}

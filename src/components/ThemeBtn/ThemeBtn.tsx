@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { IconLink } from '@components/IconButton'
+import { IconButton } from '@components/IconButton'
 import { MoonIcon, SunIcon } from '@components/Icons'
 
 export const ThemeBtn = () => {
@@ -11,9 +11,7 @@ export const ThemeBtn = () => {
 
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return (
-    <IconLink></IconLink>
-  )
+  if (!mounted) return null
 
   const isLight = resolvedTheme === 'light'
   const oppositeTheme = isLight ? 'dark' : 'light'
@@ -22,7 +20,7 @@ export const ThemeBtn = () => {
   const handleToggleTheme = () => setTheme(oppositeTheme)
 
   return (
-    <IconLink
+    <IconButton
       title={`Cambiar a tema ${spanishThemeName}`}
       tabIndex={0}
       onClick={handleToggleTheme}
@@ -30,6 +28,6 @@ export const ThemeBtn = () => {
       {
         isLight ? <SunIcon /> : <MoonIcon />
       }
-    </IconLink>
+    </IconButton>
   )
 }

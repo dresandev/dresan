@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import styles from './Link.module.css'
+import styles from './styles.module.css'
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children?: React.ReactNode;

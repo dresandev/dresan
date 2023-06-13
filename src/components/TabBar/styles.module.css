@@ -1,13 +1,15 @@
 .tabs {
+  display: flex;
   margin-top: 2rem;
   margin-inline: -1.5rem;
-  display: flex;
   overflow: auto;
 }
 
 .tab {
   flex: 1 0 content;
   padding-block: 1.5rem;
+  text-align: center;
+  text-decoration: none;
   font-weight: bold;
   color: var(--gray-text-color);
   background-color: transparent;

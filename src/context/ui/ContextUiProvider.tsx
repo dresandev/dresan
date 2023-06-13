@@ -1,12 +1,13 @@
 import { useReducer } from 'react'
 import { UiContext, uiReducer, setCurrentTabIndex } from './'
+import { getRouteIndex } from '@helpers/getRouteIndex'
 
 export interface UiContextState {
   currentTabIndex: number
 }
 
 const UI_INITIAL_STATE: UiContextState = {
-  currentTabIndex: 0,
+  currentTabIndex: getRouteIndex(),
 }
 
 export interface Props {

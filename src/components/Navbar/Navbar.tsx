@@ -1,13 +1,13 @@
-import { IconLink, ThemeBtn } from '@components'
+import { IconButton, ThemeBtn } from '@components'
 import { DresanLogo } from '@components/Icons'
-import styles from './Navbar.module.css'
+import styles from './styles.module.css'
 
 export const Navbar = () => {
   return (
     <nav className={styles.nav}>
-      <IconLink href='/' aria-label='Ir al inicio'>
+      <IconButton href='/' aria-label='Ir al inicio'>
         <DresanLogo />
-      </IconLink>
+      </IconButton>
       <ThemeBtn />
     </nav>
   )

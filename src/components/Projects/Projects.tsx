@@ -1,13 +1,18 @@
+import { projects } from '@data'
 import { ProjectCard } from './ProjectCard'
-import styles from './Projects.module.css'
-
-// TODO: Add projects from contentful
+import styles from './styles.module.css'
 
 export const Projects = () => {
   return (
     <section className={styles.projects}>
-      <ProjectCard />
-      <ProjectCard />
+      {
+        projects.map(project => (
+          <ProjectCard
+            key={project.title}
+            {...project}
+          />
+        ))
+      }
     </section>
   )
 }

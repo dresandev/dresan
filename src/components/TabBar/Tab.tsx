@@ -1,16 +1,24 @@
 'use client'
 
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import Link from 'next/link'
 import { UiContext } from '@context/ui'
-import styles from './TabBar.module.css'
+import styles from './styles.module.css'
 
 interface TabProps {
   index: number
   label: string
+  href: string
 }
 
-export const Tab: React.FC<TabProps> = ({ index, label }) => {
+export const Tab: React.FC<TabProps> = ({ index, label, href }) => {
   const { currentTabIndex, onSetCurrentTabIndex } = useContext(UiContext)
+
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
+
+  if (!mounted) return null
 
   const handleSetCurrentTabIndex = () => {
     onSetCurrentTabIndex(index)
@@ -19,11 +27,12 @@ export const Tab: React.FC<TabProps> = ({ index, label }) => {
   const active = currentTabIndex === index
 
   return (
-    <button
-      className={`${styles.tab} ${active && styles.active}`}
+    <Link
+      className={`${styles.tab} ${active ? styles.active : ''}`}
+      href={href}
       onClick={handleSetCurrentTabIndex}
     >
       <span>{label}</span>
-    </button>
+    </Link>
   )
 }
